@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
 function Logingenrate() {
-    const [phoneNumber, setPhoneNumber] = useState("")
+    const [phoneNumber, setPhoneNumber] = useState("");
+    const [showOtpInput, setShowOtpInput] = useState(false);
 
     const handlePhoneNumber = (event) => {
         setPhoneNumber(event.target.value);
@@ -9,6 +10,14 @@ function Logingenrate() {
 
     const handlePhoneSumbit = (event) => {
         event.preventDefault();
+
+        // phone Validation 
+        const phoneRegex = /[^0-9]/g;
+        if ((phoneNumber.length > 0) || phoneRegex.test(phoneNumber)){
+            alert("Invalid phone number");
+            return;
+        }
+
     };
     return(
         <>
