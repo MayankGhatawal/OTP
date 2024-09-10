@@ -24,15 +24,17 @@ function Logingenrate() {
     return(
         <>
             <p>Phone OTP Sumbit</p>
-            {!showOtpInput ? <form onSubmit={handlePhoneSumbit} className="form">
+            {!showOtpInput? (<form onSubmit={handlePhoneSumbit} className="form">
                 <input type="text" value={phoneNumber}
                     onChange={handlePhoneNumber}
                     placeholder="Enter phone number..."
                 />
                 <button type="sumbit">Sumbit</button>
-            </form>: <div>
+            </form> ) : (
+                <div>
                 <p>Enter OTP Sent to {phoneNumber}</p>
-                </div>}
+                </div>
+            )}
         </>
     )
 }
