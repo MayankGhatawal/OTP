@@ -30,7 +30,9 @@ function Logingenrate() {
                     placeholder="Enter phone number..."
                 />
                 <button type="sumbit">Sumbit</button>
-            </form>: <div></div>}
+            </form>: <div>
+                <p>Enter OTP Sent to {phoneNumber}</p>
+                </div>}
         </>
     )
 }
