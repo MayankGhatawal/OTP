@@ -12,13 +12,17 @@ function Logingenrate() {
         event.preventDefault();
 
         // phone Validation 
-        const phoneRegex = /[^0-9]/g;
-        if ((phoneNumber.length > 0) || phoneRegex.test(phoneNumber)){
+        const regex = /[^0-9]/g;
+        if ((phoneNumber.length > 0) || regex.test(phoneNumber)){
             alert("Invalid phone number");
             return;
         }
 
         setShowOtpInput(true);
+
+        const onOtpSubmit = (otp) => {
+            console.log("Login Successful", otp);
+          };
 
     };
     return(
