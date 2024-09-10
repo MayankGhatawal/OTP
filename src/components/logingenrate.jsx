@@ -38,7 +38,7 @@ function Logingenrate() {
             </form> ) : (
                 <div>
                 <p>Enter OTP Sent to {phoneNumber}</p>
-                <OtpInput length={4} onOtpSubmit={onOtpSubmit}/>
+                <OtpInput length={4} onSubmit={onOtpSubmit}/>
                 </div>
             )}
         </>
