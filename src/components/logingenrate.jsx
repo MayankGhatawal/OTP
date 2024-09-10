@@ -7,7 +7,9 @@ function Logingenrate() {
         setPhoneNumber(event.target.value);
     };
 
-    const handlePhoneSumbit = () => {};
+    const handlePhoneSumbit = (event) => {
+        event.preventDefault();
+    };
     return(
         <>
             <p>Phone OTP Sumbit</p>
